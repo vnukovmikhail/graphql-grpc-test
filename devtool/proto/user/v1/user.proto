@@ -5,14 +5,40 @@ package user.v1;
 option go_package = "GRPC/devtool/pkg/pb/v1;userv1";
 
 service UserService {
-  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+}
+
+message User {
+  int64 id = 1;
+  string email = 2;
+  string username = 3;
+}
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string username = 3;
+}
+
+message RegisterResponse {
+  User user = 1;
 }
 
 message GetUserRequest {
-  string id = 1;
+  int64 id = 1;
 }
 
 message GetUserResponse {
-  string id = 1;
-  string email = 2;
+  User user = 1;
+}
+
+message UpdateUserRequest {
+  int64 id = 1;
+  string username = 2;
+}
+
+message UpdateUserResponse {
+  User user = 1;
 }
