@@ -3,15 +3,11 @@ package graph
 // THIS CODE WILL BE UPDATED WITH SCHEMA CHANGES. PREVIOUS IMPLEMENTATION FOR SCHEMA CHANGES WILL BE KEPT IN THE COMMENT SECTION. IMPLEMENTATION FOR UNCHANGED SCHEMA WILL BE KEPT.
 
 import (
-	"context"
-
 	"GRPC/graphql-3/internal/graph/model"
-	"GRPC/graphql-3/internal/user"
+	"context"
 )
 
-type Resolver struct {
-	UserSvc *user.Service
-}
+type Resolver struct{}
 
 // CreateUser is the resolver for the createUser field.
 func (r *mutationResolver) CreateUser(ctx context.Context, name string, email string) (*model.User, error) {
@@ -80,7 +76,5 @@ type (
 //    it when you're done.
 //  - You have helper methods in this file. Move them out to keep these resolver files clean.
 /*
-	type Resolver struct {
-	UserSvc *user.Service
-}
+	type Resolver struct{}
 */

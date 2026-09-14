@@ -15,8 +15,7 @@ type Book struct {
 	Author *Author `json:"author"`
 }
 
-type Mutation struct {
-}
+type Mutation struct{}
 
 type NewBook struct {
 	Title    string `json:"title"`
@@ -24,8 +23,6 @@ type NewBook struct {
 	AuthorID string `json:"authorId"`
 }
 
-type Query struct {
-}
+type Query struct{}
 
-type Subscription struct {
-}
+type Subscription struct{}
