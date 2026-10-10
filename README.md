@@ -4,17 +4,7 @@
 
 Include projects written with `graphql`
 
-### graphql-1
-
-```.env
-DB_HOST=?
-DB_USER=?
-DB_PASSWORD=?
-DB_NAME=?
-DB_PORT=?
-```
-
-### graphql-2
+### graphql-1-2
 
 ```.env
 DB_HOST=?
